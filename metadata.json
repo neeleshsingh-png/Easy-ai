@@ -1,0 +1,10 @@
+{
+  "name": "EASY AI",
+  "description": "Multilingual conversational AI assistant with real-time voice interaction, intelligent Q&A, and voice read-aloud.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

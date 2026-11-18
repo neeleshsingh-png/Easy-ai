@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
+
+/* Markdown prose styles */
+.easy-prose {
+  line-height: 1.68;
+  font-size: 0.96875rem;
+}
+
+.easy-prose p {
+  margin-top: 0.65em;
+  margin-bottom: 0.65em;
+}
+
+.easy-prose p:first-child {
+  margin-top: 0;
+}
+
+.easy-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.easy-prose h1,
+.easy-prose h2,
+.easy-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.45em;
+  letter-spacing: -0.015em;
+}
+
+.easy-prose h1 { font-size: 1.35rem; }
+.easy-prose h2 { font-size: 1.15rem; }
+.easy-prose h3 { font-size: 1.02rem; }
+
+.easy-prose ul,
+.easy-prose ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1.35em;
+}
+
+.easy-prose ul { list-style-type: disc; }
+.easy-prose ol { list-style-type: decimal; }
+
+.easy-prose li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.easy-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.9em 0;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.easy-prose th,
+.easy-prose td {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.easy-prose th {
+  font-weight: 600;
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.easy-prose blockquote {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.625rem;
+  padding: 0.65rem 0.9rem;
+  margin: 0.75em 0;
+  background: rgba(148, 163, 184, 0.05);
+}
+
+.easy-prose a {
+  color: #0d9488;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dark .easy-prose a {
+  color: #2dd4bf;
+}
